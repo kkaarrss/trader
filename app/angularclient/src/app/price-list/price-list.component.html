@@ -1,0 +1,17 @@
+    <div class="container">
+      <div class="row" *ngFor="let price of prices;
+        index as indexOfelement;">
+        <div class="col-4">
+          {{ price.market}}
+        </div>
+        <div class="col-4">
+          <div [ngClass]="{
+            'bg-success' : price.price > previousPrices[indexOfelement].price,
+            'bg-danger' : price.price < previousPrices[indexOfelement].price
+          }">
+          {{ price.price }}
+          </div>
+        </div>
+      </div>
+    </div>
+
