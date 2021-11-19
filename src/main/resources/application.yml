@@ -1,0 +1,19 @@
+server.port: 8080
+
+spring:
+    application.name: bitvavo-trader
+    datasource:
+        url: jdbc:postgresql://localhost:5445/trader?currentSchema=public
+        username: trader
+        password: trader # pragma: allowlist secret
+    flyway:
+        enabled: true
+        table: VERSION
+        schemas: public
+    jpa.properties.hibernate:
+        default_schema: public
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+logging:
+    level:
+        root: info

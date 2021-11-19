@@ -1,0 +1,16 @@
+version: '3.7'
+services:
+  database:
+    image: postgres:12.1
+    network_mode: bridge
+    container_name: trader
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d
+    expose:
+      - 5445
+    ports:
+      - "5445:5432"
+    environment:
+      - POSTGRES_MULTIPLE_DATABASES=trader
+
+
