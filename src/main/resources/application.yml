@@ -1,4 +1,4 @@
-server.port: 8080
+server.port: 8090
 
 spring:
     application.name: bitvavo-trader
@@ -6,6 +6,7 @@ spring:
         url: jdbc:postgresql://localhost:5445/trader?currentSchema=public
         username: trader
         password: trader # pragma: allowlist secret
+        driver-class-name: org.postgresql.Driver
     flyway:
         enabled: true
         table: VERSION
