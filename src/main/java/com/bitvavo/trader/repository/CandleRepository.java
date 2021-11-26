@@ -1,6 +1,6 @@
 package com.bitvavo.trader.repository;
 
-import static com.bitvavo.trader.repository.Queries.CANDLESQUERY;
+import static com.bitvavo.trader.repository.Queries.*;
 
 import java.util.LinkedList;
 
@@ -18,4 +18,11 @@ public interface CandleRepository extends CrudRepository<Candle,Long> {
 
     @Query(nativeQuery = true, value = CANDLESQUERY)
     LinkedList<Candle> findCandlesQuery(@Param("market") String Market, @Param("minutes") int minutes);
+
+    @Query(nativeQuery = true, value = CANDLESQUERYWITHLIMIT)
+    LinkedList<Candle> findCandlesQueryWithLimit(@Param("market") String Market, @Param("minutes") int minutes, @Param("limit") int limit);
+
+    @Query(nativeQuery = true, value = CANDLEBYHIGH)
+    Candle findCandleQueryByHigh(@Param("market") String market, @Param("start") long start, @Param("stop") long stop);
+
 }

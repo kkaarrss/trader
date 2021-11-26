@@ -2,9 +2,11 @@ package com.bitvavo.trader.controllers.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.ToString;
 
 @AllArgsConstructor
 @Getter
+@ToString
 public class CandleDto {
     private String market;
     private long start;
@@ -13,4 +15,5 @@ public class CandleDto {
     private double high;
     private double low;
     private double close;
+    private double volume;
 }

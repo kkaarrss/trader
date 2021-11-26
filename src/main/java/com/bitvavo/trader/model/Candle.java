@@ -38,9 +38,10 @@ public class Candle implements Serializable {
     private double high;
     private double low;
     private double close;
+    private double volume;
 
     @Override
     public String toString() {
-        return "Candle{" + "start=" + start + ", stop=" + stop + ", open=" + open + ", high=" + high + ", low=" + low + ", close=" + close + '}';
+        return "Candle{" + "start=" + start + ", stop=" + stop + ", open=" + open + ", high=" + high + ", low=" + low + ", close=" + close + ", volume=" + volume + '}';
     }
 }
