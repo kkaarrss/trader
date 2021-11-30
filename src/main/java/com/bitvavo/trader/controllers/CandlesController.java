@@ -18,12 +18,12 @@ public class CandlesController {
 
     @GetMapping("/market/{market}/candles/{interval}")
     public CandlesResponse getCandles(@PathVariable("market") String market, @PathVariable("interval") int interval) {
-        return new CandlesResponse(candlesDtoMapper.map(candleRepository.findCandlesQuery(market, interval)));
+        return new CandlesResponse(candlesDtoMapper.map(candleRepository.findCandlesQuery(market, interval, 1)));
     }
 
     @GetMapping("/market/{market}/candles/{interval}/{limit}")
     public CandlesResponse getCandles(@PathVariable("market") String market, @PathVariable("interval") int interval, @PathVariable("limit") int limit) {
-        return new CandlesResponse(candlesDtoMapper.map(candleRepository.findCandlesQueryWithLimit(market, interval, limit)));
+        return new CandlesResponse(candlesDtoMapper.map(candleRepository.findCandlesQuery(market, interval, limit)));
     }
 
     @GetMapping("/market/{market}/candles/high/{start}/{stop}")

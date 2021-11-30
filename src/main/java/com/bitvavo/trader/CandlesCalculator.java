@@ -1,8 +1,6 @@
 package com.bitvavo.trader;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.scheduling.annotation.Async;
@@ -11,15 +9,11 @@ import org.springframework.stereotype.Component;
 import com.bitvavo.trader.clients.BitvavoClient;
 import com.bitvavo.trader.model.Candle;
 import com.bitvavo.trader.model.Market;
-import com.bitvavo.trader.model.Price;
-import com.bitvavo.trader.model.Run;
 import com.bitvavo.trader.repository.CandleRepository;
 import com.bitvavo.trader.repository.MarketRepository;
-import com.bitvavo.trader.repository.RunRepository;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-
 
 @Component
 @Slf4j

@@ -19,6 +19,8 @@ public class BitvavoClient {
     private final Bitvavo bitvavo = new Bitvavo(new JSONObject("{" +
             "APIKEY: '6aed39883a6593e8efe78fdb91d8665ec73e0614a85a98688f225d59e38d3e64', " +
             "APISECRET: '8b19bda51d1bbdbe36befab0e265714e0efa045ceef65f7d68b894a636dedb2a705c4b806efb2ed0ef339c93e8ca37bba0a6f82e93fc41a26b5eceae8289ab70', " +
+//            "APIKEY: 'ba0e847f4be6a19d2a2ffd56a96c0e3b2e1e3835afef0da500249badb9c1fcf1', " +
+//            "APISECRET: '2cd76d0ac5773d7c5f648effa4903fe2b6542e3638abd9d20d2365f12d34aae60cdb80c5a04292de8d9b8b012b34ae4261a076007f278009036a493cf03e5141', " +
             "RESTURL: 'https://api.bitvavo.com/v2'," +
             "WSURL: 'wss://ws.bitvavo.com/v2/'," +
             "ACCESSWINDOW: 10000, " +
